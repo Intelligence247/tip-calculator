@@ -1,0 +1,144 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #86bbd8;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+section {
+    max-width: 60rem;
+    height: 100vh;
+    margin: auto;
+    padding-top: 5rem;
+}
+
+main {
+    background-color: white;
+    max-width: 42rem;
+    height: 29rem;
+    margin: auto;
+    border-radius: 5px;
+
+}
+
+header {
+    background-color: #336699;
+}
+
+header {
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+header h1 {
+    padding: 1rem;
+    color: white;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: #212529;
+    line-height: 1.5rem
+}
+
+.img {
+    display: flex;
+    z-index: 2;
+}
+
+.img p:first-child {
+    background-color: #336699;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Font Awesome 5 Free";
+}
+
+.img img {
+    background-color: #336699;
+    width: 3rem;
+    height: 3rem;
+
+
+}
+
+input,
+select {
+    width: 100%;
+    border-radius: 0px 5px 5px 0px;
+    height: 3rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 400;
+    font-size: 1.25rem;
+    color: #495057;
+    line-height: 1.5rem;
+    padding-left: 1.5rem;
+    border: 1px solid #ced4da;
+    transition: all 0.2s linear;
+}
+select{
+    border-radius: 5px;
+}
+input {
+    border-left: none;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #86bbd8;
+}
+
+.inputs {
+    margin: 2rem;
+}
+
+footer {
+    font-weight: 400;
+    font-size: 1.25rem;
+    background-color: #336699;
+    width: 30rem;
+    margin: auto;
+    margin-top: 2rem;
+    line-height: 1.5rem;
+    padding-left: 1.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: white;
+
+}
+
+footer:hover {
+    background-color: #86bbd8;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    color: #495057;
+}
+
+@media (max-width:640px) {
+section{
+    padding: 0;
+}
+    main {
+        width: 17rem;
+        height: 33rem;
+    }
+
+    footer {
+        width: 12rem;
+    }
+}
