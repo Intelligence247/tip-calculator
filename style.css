@@ -13,13 +13,14 @@ section {
     max-width: 60rem;
     height: 100vh;
     margin: auto;
-    padding-top: 5rem;
+    padding-top: 1.2rem;
 }
 
 main {
     background-color: white;
     max-width: 42rem;
-    min-height: 29rem;
+    height: max-content;
+    padding-bottom: 1rem;
     margin: auto;
     border-radius: 5px;
 
@@ -125,12 +126,30 @@ select:focus {
 
 }
 
+
+.answers,
+.errorMessages {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+}
+
+.answers,
+.each {
+    background-color: white;
+    margin-bottom: 1rem;
+}
+
 #calc:hover {
     background-color: #86bbd8;
     transition: all 0.3s linear;
     cursor: pointer;
     color: #495057;
 }
+
 
 @media (max-width:640px) {
     section {
