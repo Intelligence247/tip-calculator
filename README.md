@@ -9,11 +9,10 @@ Clone or download this repository and run with a local server of open `index.htm
 ## Tech/framework used
 - Html
 - Css
+- JavaScript
 ## Demo
 [Go Live](https://peaceful-starburst-1d37fe.netlify.app)
-
 ![screenshot](./media/ss.png)
-
 ## Contact
 If you want to contact me you can reach me at
 - https://github.com/Intelligence247 or

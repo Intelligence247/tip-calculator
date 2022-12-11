@@ -19,7 +19,7 @@ section {
 main {
     background-color: white;
     max-width: 42rem;
-    height: 29rem;
+    min-height: 29rem;
     margin: auto;
     border-radius: 5px;
 
@@ -88,9 +88,11 @@ select {
     border: 1px solid #ced4da;
     transition: all 0.2s linear;
 }
-select{
+
+select {
     border-radius: 5px;
 }
+
 input {
     border-left: none;
 }
@@ -104,7 +106,7 @@ select:focus {
     margin: 2rem;
 }
 
-footer {
+#calc {
     font-weight: 400;
     font-size: 1.25rem;
     background-color: #336699;
@@ -119,10 +121,11 @@ footer {
     align-items: center;
     border-radius: 5px;
     color: white;
+    border: none;
 
 }
 
-footer:hover {
+#calc:hover {
     background-color: #86bbd8;
     transition: all 0.3s linear;
     cursor: pointer;
@@ -130,15 +133,16 @@ footer:hover {
 }
 
 @media (max-width:640px) {
-section{
-    padding: 0;
-}
+    section {
+        padding: 0;
+    }
+
     main {
         width: 17rem;
         height: 33rem;
     }
 
-    footer {
+    #calc {
         width: 12rem;
     }
 }
