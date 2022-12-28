@@ -14,68 +14,59 @@ let err = document.querySelector('#chooseErr')
 err.innerHTML = ''
 manyErr.innerHTML = ''
 muchErr.innerHTML = ''
-const selectObj = [
-    { rate: 'select' },
-    { rate: 'great', percent: 20 },
-    { rate: 'good', percent: 10 },
-    { rate: 'bad', percent: 2 },
-]
-selects.addEventListener('click', (e) => {
-    btn.addEventListener('click', () => {
-        const result = selectObj.find((d) => d.rate == e.target.value)
-        console.log(result)
-        console.log(result.percent)
 
-        errM.style.width = '90%'
-        errM.style.height = 'max-content'
-        errM.style.marginTop = '1.3rem'
-        errM.style.backgroundColor = '#f8d7da';
-        errM.style.gap = '0.7rem'
+btn.addEventListener('click', (e) => {
+    const result = selects.value
+    console.log(result)
+    errM.style.width = '90%'
+    errM.style.height = 'max-content'
+    errM.style.marginTop = '1.3rem'
+    errM.style.backgroundColor = '#f8d7da';
+    errM.style.gap = '0.7rem'
 
-        ans.style.width = '90%'
-        ans.style.padding = '0.6rem'
-        ans.style.height = 'max-content'
-        ans.style.textAlign = 'center'
+    ans.style.width = '90%'
+    ans.style.padding = '0.6rem'
+    ans.style.height = 'max-content'
+    ans.style.textAlign = 'center'
 
-        tip.textContent = `Tip Amount $ ${(input1.value * (1 + (result.percent / 100)) - input1.value).toFixed(2)}`
-        total.textContent = `Total Amount $ ${(input1.value * (1 + (result.percent / 100))).toFixed(2)}`
-        each.textContent = `Each Person Owes $ ${((input1.value * (1 + (result.percent / 100))) / input2.value).toFixed(2)}`
+    tip.textContent = `Tip Amount $ ${(input1.value * (1 + (result / 100)) - input1.value).toFixed(2)}`
+    total.textContent = `Total Amount $ ${(input1.value * (1 + (result / 100))).toFixed(2)}`
+    each.textContent = `Each Person Owes $ ${((input1.value * (1 + (result / 100))) / input2.value).toFixed(2)}`
 
-        if (result.rate === 'select') {
-            err.textContent = 'You Must Select a Service'
-            // ans.style.display = 'none'
-            err.style.display = 'block'
+    if (result === 'select') {
+        err.textContent = 'You Must Select a Service'
+        // ans.style.display = 'none'
+        err.style.display = 'block'
 
-        } else {
-            err.style.display = 'none'
-            // ans.style.display = 'block'
-        }
+    } else {
+        err.style.display = 'none'
+        // ans.style.display = 'block'
+    }
 
-        if (input1.value.length <= 0) {
-            muchErr.textContent = 'Bill Amount Cannot Be Blank'
-            // ans.style.display = 'none'
-            muchErr.style.display = 'block'
-        } else {
-            muchErr.style.display = 'none'
-            // ans.style.display = 'block'
+    if (input1.value.length <= 0) {
+        muchErr.textContent = 'Bill Amount Cannot Be Blank'
+        // ans.style.display = 'none'
+        muchErr.style.display = 'block'
+    } else {
+        muchErr.style.display = 'none'
+        // ans.style.display = 'block'
 
-        }
+    }
 
 
-        if (input2.value.length <= 0 || input2.value == 0) {
-            manyErr.textContent = 'Number Of Users Must Be Greater Than Zero'
-            // ans.style.display = 'none'
-            manyErr.style.display = 'block'
-        } else {
-            manyErr.style.display = 'none'
-            // ans.style.display = 'block'
+    if (input2.value.length <= 0 || input2.value == 0) {
+        manyErr.textContent = 'Number Of Users Must Be Greater Than Zero'
+        // ans.style.display = 'none'
+        manyErr.style.display = 'block'
+    } else {
+        manyErr.style.display = 'none'
+        // ans.style.display = 'block'
 
-        }
+    }
 
-        if (input1.value.length >= 1 && input2.value.length >= 1 && result.rate != 'select') {
-            ans.style.display = 'block'
-        } else {
-            ans.style.display = 'none'
-        }
-    })
+    if (input1.value.length >= 1 && input2.value.length >= 1 && result != 'select') {
+        ans.style.display = 'block'
+    } else {
+        ans.style.display = 'none'
+    }
 })
