@@ -56,8 +56,9 @@ btn.addEventListener('click', (e) => {
 
     if (input2.value.length <= 0 || input2.value == 0) {
         manyErr.textContent = 'Number Of Users Must Be Greater Than Zero'
-        // ans.style.display = 'none'
         manyErr.style.display = 'block'
+        ans.style.display = 'none'
+
     } else {
         manyErr.style.display = 'none'
         // ans.style.display = 'block'

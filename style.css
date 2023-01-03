@@ -156,13 +156,22 @@ select:focus {
 }
 
 @media (max-width:640px) {
+    :root {
+        font-size: 10px;
+    }
+
+    body {
+        overflow: hidden;
+
+    }
+
     section {
-        padding: 0;
+        padding-top: 2rem;
     }
 
     main {
-        width: 17rem;
-        height: 33rem;
+        width: 25rem;
+        height: auto;
     }
 
     #calc {
